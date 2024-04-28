@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom right, #e56b6f, #9b59b6);
-            height: 100vh;
+            height: 110vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -49,18 +49,30 @@
             margin: 0 10px;
             cursor: pointer;
         }
-        .payment-button {
-            display: inline-block;
+        .qr-box {
+            margin-bottom:5px;
+        }
+        .other-upi-apps {
+            background: linear-gradient(to bottom right, #e56b6f, #9b59b6);
+            border-radius: 50px;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .other-upi-apps button {
             background: none;
             border: none;
+            color: white;
             cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            outline: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="qr-box">
-            <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pn=iarun@kotak&am=&cu=INR" alt="QR Code">
+            <img id="qr-code" src="https://github.com/Arun-Vats/great-cinemas-payment/blob/main/qr-code(1).png?raw=true" alt="QR Code">
         </div>
         <h2>Great Cinemas</h2>
         <p class="small-text">Scan & Pay using any UPI App</p>
@@ -68,7 +80,10 @@
             <img src="https://ik.imagekit.io/pngserver/Untitled%20design%20-%202024-04-26T201409.734.png" alt="Google Pay" onclick="window.location.href='upi://pay?pa=googlepayqr2810050501011li0vwwor9bx@googlepay&pn=Google Pay'">
             <img src="https://ik.imagekit.io/pngserver/Untitled%20design%20-%202024-04-26T201822.176.png" alt="Paytm" onclick="window.location.href='upi://pay?pa=paytmqr2810050501011li0vwwor9bx@paytm'">
             <img src="https://ik.imagekit.io/pngserver/Untitled%20design%20-%202024-04-26T202218.929.png" alt="PhonePe" onclick="window.location.href='phonepe://pay?pa=paytmqr2810050501011li0vwwor9bx@paytm'">
-            <img src="https://static-00.iconduck.com/assets.00/cred-icon-870x1024-8mxv62fy.png" alt="CRED" onclick="window.location.href='upi://pay?pa=googlepayqr2810050501011li0vwwor9bx@googlepay&pn=Google Pay'">
+            <img src="https://static-00.iconduck.com/assets.00/cred-icon-870x1024-8mxv62fy.png" alt="CRED" onclick="window.location.href='upi://pay?pa=paytmqr2810050501011li0vwwor9bx@paytm'">
+        </div>
+        <div class="other-upi-apps">
+            <button onclick="window.location.href='upi://pay?pa=paytmqr2810050501011li0vwwor9bx@paytm'">Other UPI Apps</button>
         </div>
     </div>
 </body>
