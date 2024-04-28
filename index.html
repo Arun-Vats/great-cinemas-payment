@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPI Payment</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(to bottom right, #e56b6f, #9b59b6);
             color: #fff;
             height: 100vh;
             display: flex;
@@ -17,21 +19,40 @@
             align-items: center;
         }
         .container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 20px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 400px;
+            text-align: center;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
         }
         .qr-box {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
         #qr-code {
             max-width: 200px;
+        }
+        h2 {
+            font-weight: 700;
+            margin-top: 20px;
+        }
+        .small-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .payment-logos img {
+            height: 30px;
+            margin: 0 10px;
         }
         .button {
             display: inline-block;
@@ -40,7 +61,6 @@
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 20px;
-            margin-top: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
     </style>
@@ -50,8 +70,14 @@
         <div class="qr-box">
             <img id="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pn=iarun@kotak&am=&cu=INR" alt="QR Code">
         </div>
-        <p>Scan the QR code or click the button below to pay using UPI.</p>
-        <a class="button" href="upi://pay?pn=iarun@kotak&am=&cu=INR">Pay Here</a>
+        <h2>Paying To Great Cinemas</h2>
+        <p class="small-text">Pay with any UPI app</p>
+        <div class="payment-logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/GooglePayLogo.svg/1200px-GooglePayLogo.svg.png" alt="Google Pay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Paytm_logo_2020.svg/1200px-Paytm_logo_2020.svg.png" alt="Paytm">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/PhonePe.svg/1200px-PhonePe.svg.png" alt="PhonePe">
+        </div>
+        <a class="button" href="upi://pay?pn=iarun@kotak&am=&cu=INR">Pay Now</a>
     </div>
 </body>
 </html>
